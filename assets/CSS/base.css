@@ -6,6 +6,7 @@
   --border: #dbdbdb;
   --navheight: 34px;
   --header-height: 120px;
+  --star-color: #80f502;
   --header-with-search-height: calc(var(--header-height) - var(--navheight));
 }
 
@@ -33,22 +34,22 @@ html {
   margin: 0 -5px;
 }
 
-.grid__column-2{
+.grid__column-2 {
   padding: 0 5px;
   width: 16.6667%;
 }
-.grid__column-2-4{
+.grid__column-2-4 {
   padding: 0 5px;
   width: 20%;
 }
 
-
-.grid__column-10{
+.grid__column-10 {
   padding: 0 5px;
   width: 83.3334%;
 }
-
-
+.yellow {
+  color: var(--star-color);
+}
 /* animation */
 @keyframes fadein {
   0% {
@@ -106,7 +107,7 @@ html {
   padding: 0 12px;
   cursor: pointer;
   color: var(--text);
-  display:inline-flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
@@ -116,7 +117,7 @@ html {
   color: var(--white);
 }
 
-.black{
+.black {
   color: var(--black);
 }
 .btn.btn--primary.disable {
@@ -162,7 +163,7 @@ html {
 }
 /* selection */
 
-.select__input{
+.select__input {
   min-width: 170px;
   height: 34px;
   padding: 0 12px;
@@ -174,11 +175,11 @@ html {
   position: relative;
 }
 
-.select__input-label{
+.select__input-label {
   font-size: 1.4rem;
 }
 
-.select__input-list{
+.select__input-list {
   position: absolute;
   left: 0;
   right: 0;
@@ -189,23 +190,22 @@ html {
   padding: 8px 16px;
   display: none;
 }
-.select__input:hover .select__input-list{
+.select__input:hover .select__input-list {
   display: block;
 }
 
-.select__input-link{
+.select__input-link {
   font-size: 1.4rem;
   color: var(--text);
   text-decoration: none;
   padding: 6px 0;
   display: block;
 }
-.select__input-link:hover{
+.select__input-link:hover {
   color: var(--primary);
 }
 
-.fa-solid.disable{
+.fa-solid.disable {
   color: #ccc;
   cursor: default;
 }
-

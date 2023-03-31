@@ -210,3 +210,26 @@ html {
   color: #ccc;
   cursor: default;
 }
+.pagination {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+}
+.pagination-link {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--primary-color);
+  display: inline-block;
+  min-width: 40px;
+  height: 30px;
+  line-height: 3rem;
+  text-align: center;
+}
+.pagination-link.active {
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 3px;
+}

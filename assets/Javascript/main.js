@@ -16,5 +16,19 @@ let cartItem = document.querySelectorAll(".cart__item-add");
 let cartNum = document.querySelector(".cart__noti");
 cartNum.textContent = cartItem.length;
 cart.onclick = () => {
-  cartList.classList.toggle("show");
+  addClass(cartList, "toggle", "show");
 };
+
+function addClass(selector, type, value) {
+  selector.classList[type](value);
+}
+
+let paginations = document.querySelectorAll(".pagination-link");
+paginations.forEach((page) => {
+  page.onclick = () => {
+    paginations.forEach((num) => {
+      addClass(num, "remove", "active");
+    });
+    addClass(page, "add", "active");
+  };
+});

@@ -1025,3 +1025,7 @@ i.like-icon-fill {
   font-size: 1.4rem;
   line-height: 1.4rem;
 }
+
+.home__page{
+  margin: 48px 0 32px;
+}

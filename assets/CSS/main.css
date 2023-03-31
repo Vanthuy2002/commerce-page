@@ -163,6 +163,8 @@ i {
   border-radius: 2px;
   display: none;
   animation: fadein ease-in 0.3s;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 /* tạo cầu nối giũa menu mẹ và 
 menu con để hover không bị trượt */
@@ -457,9 +459,8 @@ menu con để hover không bị trượt */
   display: inline-block;
   padding: 0 12px;
   cursor: pointer;
-  z-index: 5;
 }
-.cart__wrap:hover .cart__list {
+.cart__wrap .show{
   display: block;
 }
 
@@ -474,7 +475,9 @@ menu con để hover không bị trượt */
   display: none;
   animation: fadein ease-in 0.2s;
   cursor: default;
+  z-index: 2;
 }
+
 
 .header__cart-img {
   width: 50%;
@@ -668,6 +671,8 @@ menu con để hover không bị trượt */
 .cart__list-item {
   padding-left: 0;
   list-style: none;
+  height: 50vh;
+  overflow-y: auto;
 }
 .cart__item-add {
   display: flex;
@@ -688,12 +693,23 @@ menu con để hover không bị trượt */
 .item__inf-head {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .head__item-name {
   font-size: 1.5rem;
   margin: 0;
+  padding-right: 16px;
+  text-align: left;
   color: var(--text);
+  line-height: 1.5;
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  flex: 1;
 }
 .item__inf-price {
   font-size: 1.5rem;
@@ -847,12 +863,23 @@ h3 {
 }
 
 /* home product */
-
+.home__product {
+  margin-bottom: 10px;
+}
 .home__product-item {
   margin-top: 10px;
   background-color: var(--white);
   position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: transform 0.2s linear;
+  will-change: transform;
 }
+.home__product-item:hover {
+  transform: translateY(-2px);
+}
+
 .home__product-img {
   padding-top: 100%;
   /* set chiều nhang với chính thẻ chứa nó 
@@ -973,7 +1000,18 @@ i.like-icon-fill {
   height: 46px;
   background-color: rgba(255, 216, 64, 0.8);
   text-align: center;
-  clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 51% 83%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  clip-path: polygon(
+    50% 0%,
+    100% 0,
+    100% 35%,
+    100% 70%,
+    100% 100%,
+    51% 83%,
+    0 100%,
+    0% 70%,
+    0% 35%,
+    0 0
+  );
 }
 .home__product-item-percent {
   font-weight: 600;

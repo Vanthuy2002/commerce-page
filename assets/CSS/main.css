@@ -460,7 +460,7 @@ menu con để hover không bị trượt */
   padding: 0 12px;
   cursor: pointer;
 }
-.cart__wrap .show{
+.cart__wrap .show {
   display: block;
 }
 
@@ -477,7 +477,6 @@ menu con để hover không bị trượt */
   cursor: default;
   z-index: 2;
 }
-
 
 .header__cart-img {
   width: 50%;
@@ -703,7 +702,7 @@ menu con để hover không bị trượt */
   text-align: left;
   color: var(--text);
   line-height: 1.5;
-  display:-webkit-box;
+  display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -870,6 +869,7 @@ h3 {
   margin-top: 10px;
   background-color: var(--white);
   position: relative;
+  padding: 0 0 10px;
   border-radius: 3px;
   overflow: hidden;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -1026,6 +1026,29 @@ i.like-icon-fill {
   line-height: 1.4rem;
 }
 
-.home__page{
+.home__page {
   margin: 48px 0 32px;
+}
+
+/* footer */
+.footer {
+  border-top: 4px solid var(--primary-color);
+  padding-top: 16px;
+}
+.footer-heading{
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.footer_list{
+  list-style: none;
+}
+.footer-link{
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #737373;
+  display: inline-block;
+  padding: 5px 0;
 }

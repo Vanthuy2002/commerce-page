@@ -50,6 +50,10 @@ html {
 .yellow {
   color: var(--star-color);
 }
+
+ul {
+  padding-left: 0;
+}
 /* animation */
 @keyframes fadein {
   0% {

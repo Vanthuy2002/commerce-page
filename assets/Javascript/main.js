@@ -32,3 +32,10 @@ paginations.forEach((page) => {
     addClass(page, "add", "active");
   };
 });
+
+let search = document.querySelector(".mobile-search");
+let headerSearch = document.querySelector(".header__search");
+
+search.onclick = () => {
+  addClass(headerSearch, "toggle", "showSearch");
+};
